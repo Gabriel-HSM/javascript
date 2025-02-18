@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qual a sua Nacionalidade?</title>
+    <title>Qual é a sua Nacionalidade?</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <div id="pai">
-        <div id="filho">
+    <div class="fundo">
+        <div class="pergunta">
             Em que País você nasceu?
-            <input type="text" id="pais">
-            <input type="button" value="Verificar" id="verificar" onclick="verificar()">
+            <input type="text" id="resposta" class="resposta">
+            <input type="button" value="Verificar" id="verificar" class="verificar" onclick="verificar()">
         </div>
     </div>
-    <h1 id="qual">Qual</h1>
-    <h1 id="e">è a sua</h1><br>
-    <h1 id="na"> Nacionalidade?</h1>
-    <div id="resultado">
+    <h1 class="qual">Qual</h1>
+    <h1 class="e">è a sua</h1><br>
+    <h1 class="na"> Nacionalidade?</h1>
+    <div id="resultado"   class="resultado">
         
     </div>
     
 
-    <Script>
+    <script>
         function verificar(){
-            var contry = window.document.getElementById("pais")
+            var contry = window.document.getElementById("resposta")
             var contry = String(contry.value)
             var res = window.document.getElementById("resultado")
-            if(contry != "Brasil"){
+            if(contry.toLowerCase() != "Brasil"){
                 res.innerHTML = `Vivendo em ${contry}<br> Você é Estrangeiro!`
             }else{
                 res.innerHTML = `Vivendo em ${contry} <br> Você é Brasileiro!!`
             }
         } 
         
-    </Script>
+    </script>
 </body>
 </html>
