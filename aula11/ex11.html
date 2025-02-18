@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual a sua Nacionalidade?</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="pai">
+        <div id="filho">
+            Em que País você nasceu?
+            <input type="text" id="pais">
+            <input type="button" value="Verificar" id="verificar" onclick="verificar()">
+        </div>
+    </div>
+    <h1 id="qual">Qual</h1>
+    <h1 id="e">è a sua</h1><br>
+    <h1 id="na"> Nacionalidade?</h1>
+    <div id="resultado">
+        
+    </div>
+    
+
+    <Script>
+        function verificar(){
+            var contry = window.document.getElementById("pais")
+            var contry = String(contry.value)
+            var res = window.document.getElementById("resultado")
+            if(contry != "Brasil"){
+                res.innerHTML = `Vivendo em ${contry}<br> Você é Estrangeiro!`
+            }else{
+                res.innerHTML = `Vivendo em ${contry} <br> Você é Brasileiro!!`
+            }
+        } 
+        
+    </Script>
+</body>
+</html>
