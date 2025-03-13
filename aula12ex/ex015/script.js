@@ -49,7 +49,7 @@ function verificar(){
         }
         res.style.textAlign = 'center'//mudando estilo pelo JS
         res.innerHTML = `Detectamos ${genero} com ${idade} anos `
-        res.appendChild(img)
+        res.appendChild(img)//adiciona o elemento IMG
         img.style.display = 'flex'  
         img.style.justifyContent = 'center'
         img.style.alignItems = 'center' 
